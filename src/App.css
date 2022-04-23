@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.clrwhite{
+color: white !important;
+font-family: "Libre Baskerville";
+}
+
+.btn{
+  border-radius: 25 !important;
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Libre Baskerville";
+}
+
+.task{
+  border-radius: 10px !important;
+  margin: 1rem auto 0 !important;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 350px;
+  width: 40vw;
+  min-width: 300px;
+  max-width: 600px;
+  background: #333;
+  border: 2px solid #000;
+  box-shadow: 24px;
+  padding: 1rem;
+  background-image: radial-gradient(circle at 29% 55%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 4%,transparent 4%, transparent 44%,transparent 44%, transparent 100%),radial-gradient(circle at 85% 89%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 51%,transparent 51%, transparent 52%,transparent 52%, transparent 100%),radial-gradient(circle at 6% 90%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 53%,transparent 53%, transparent 64%,transparent 64%, transparent 100%),radial-gradient(circle at 35% 75%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 6%,transparent 6%, transparent 98%,transparent 98%, transparent 100%),radial-gradient(circle at 56% 75%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 16%,transparent 16%, transparent 23%,transparent 23%, transparent 100%),radial-gradient(circle at 42% 0%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 3%,transparent 3%, transparent 26%,transparent 26%, transparent 100%),radial-gradient(circle at 29% 28%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 51%,transparent 51%, transparent 75%,transparent 75%, transparent 100%),radial-gradient(circle at 77% 21%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 35%,transparent 35%, transparent 55%,transparent 55%, transparent 100%),radial-gradient(circle at 65% 91%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 46%,transparent 46%, transparent 76%,transparent 76%, transparent 100%),linear-gradient(45deg, rgb(83, 91, 235),rgb(76, 11, 174));
+};
+
+.iconBtn{
+  border: 1px solid black !important;
+  background: black !important;
+}
