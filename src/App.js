@@ -2,8 +2,9 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import * as React from 'react'
 import {Alert, Button, ButtonGroup, Grid, IconButton, Modal, Snackbar, TextField, Typography } from '@mui/material';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
+import EditRoundedIcon from '@mui/icons-material/EditRounded';
+import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
+import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import { gradientStyles, modal1, modal2 } from './constant';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 
@@ -150,7 +151,7 @@ function App() {
   return (
     <div className="App">
       <Grid container justifyContent="center" alignItems={'center'} spacing={2}>
-        <Grid container item xs={12} sm={8} md={6} lg={5} spacing={2} justifyContent="center" alignContent={"space-around"}>
+        <Grid container item xs={12} sm={8} md={6} lg={5}justifyContent="space-around" alignContent={"space-around"}>
           <Grid item xs={12}>
             <Typography className='clrwhite' variant='h4' fontWeight={"400"}>What would you like to do today?</Typography>
           </Grid>
@@ -174,17 +175,18 @@ function App() {
           {!showCollection &&
             state.currList.map((item,index)=><Grid
                key={item} item  xs={11} container justifyContent="space-around" alignItems='center'className="task" style={gradientStyles[index%5]}>
-                 <Grid item xs={8}><Typography variant='inherit' align='left'>{item}</Typography></Grid>
-                 <Grid item xs={1}>
+                 <Grid item xs={6}><Typography variant='inherit' align='left'>{item}</Typography></Grid>
+                 <Grid item xs={1} className='iconclr'>
                    <IconButton variant="contained" size='large' onClick={handleOpen.bind(this,true,item,true)}>
-                    <EditIcon fontSize='medium'></EditIcon>
+                    <EditRoundedIcon fontSize='medium'></EditRoundedIcon>
                    </IconButton>
                  </Grid>
-                 <Grid item xs={1}>
+                 <Grid item xs={1} className='iconclr'>
                  <IconButton variant="contained" size='large' onClick={removeTask.bind(this,item)}>
-                   <DeleteIcon fontSize='medium'/>
+                   <DeleteRoundedIcon fontSize='medium'/>
                  </IconButton>
                  </Grid>
+                 <Grid item xs={1}/>
                </Grid>)               
           }
 
@@ -192,12 +194,12 @@ function App() {
           {showCollection &&
             Object.keys(state.collection).map((item,index)=><Grid
                key={item} item  xs={11} container justifyContent="space-around" alignItems={'center'} className="task" style={gradientStyles[index%5]}>
-                 <Grid item xs={6}><Typography variant='inherit' align='left'>{item}</Typography></Grid>
-                 <Grid item xs={6}>
+                 <Grid item xs={5}><Typography variant='inherit' align='left'>{item}</Typography></Grid>
+                 <Grid item xs={6} className='iconclr'>
                  <ButtonGroup variant="filled" aria-label="outlined primary button group">
-                    <Button onClick={editCollectionList.bind(this,item)}>Edit</Button>
-                    <Button onClick={removeFromCollection.bind(this,item)}>Delete</Button>
-                    <Button onClick={takeToCurrList.bind(this,item)}>Select</Button>
+                    <IconButton onClick={editCollectionList.bind(this,item)}><EditRoundedIcon></EditRoundedIcon></IconButton>
+                    <IconButton onClick={removeFromCollection.bind(this,item)}><DeleteRoundedIcon/></IconButton>
+                    <IconButton onClick={takeToCurrList.bind(this,item)}><LogoutRoundedIcon/></IconButton>
                   </ButtonGroup>
                  </Grid>
                </Grid>)               

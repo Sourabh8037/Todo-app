@@ -20,6 +20,7 @@ font-family: "Libre Baskerville";
   font-weight: 500;
   cursor: pointer;
   font-family: "Libre Baskerville";
+  margin: 0.2rem;
 }
 
 .task{
@@ -31,6 +32,7 @@ font-family: "Libre Baskerville";
   font-weight: 600;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 0;
+  color: #000;
 }
 
 .modal{
@@ -46,6 +48,10 @@ font-family: "Libre Baskerville";
   box-shadow: 24px;
   padding: 1rem;
 };
+
+.iconclr{
+  color: #fff;
+}
 
 .iconBtn{
   border: 1px solid black !important;
